@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import { mobile } from "../responsive";
@@ -78,6 +78,19 @@ const Button = styled.button`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  // Hàm để xử lý việc chuyển slide tự động
+  const handleAutoSlide = () => {
+    setSlideIndex((prevIndex) => {
+      return prevIndex < 2 ? prevIndex + 1 : 0;
+    });
+  };
+  useEffect(() => {
+    // Thiết lập interval để chuyển slide sau một khoảng thời gian nhất định (vd: 5 giây)
+    const interval = setInterval(handleAutoSlide, 5000);
+
+    // Xóa interval khi component unmount
+    return () => clearInterval(interval);
+  }, []);
   const handleClick = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
