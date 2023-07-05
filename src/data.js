@@ -1,21 +1,21 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://toplist.vn/images/800px/trang-phuc-truyen-thong-dan-toc-thai-588634.jpg",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/16875793169345c5d3ab3b745bc7aabafd36aaac43a52.jpg?alt=media&token=71b0f566-8c52-4e7d-82d6-a6dc05336a63",
     title: "SUMMER SALE",
     desc: "Trang phục dân tộc đẹp và độc đáo nhất ở Việt Nam, hỗ trợ giao hàng toàn quốc",
     bg: "fcf1ed",
   },
   {
     id: 2,
-    img: "https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng%204/S%E1%BB%91%20gh%C3%A9p/T38-48/Dao%20do-%20Hoang%20Su%20Phi-%20Ha%20Giang.jpg",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/1687577759047sg-11134201-22120-5ba2z4e45qkvb4.jpg?alt=media&token=3c7d0919-98e9-4b6b-9822-54e07e5fc392",
     title: "LOUNGEWEAR LOVE",
     desc: "Trang phục dân tộc đẹp và độc đáo nhất ở Việt Nam, giảm giá 30%",
     bg: "fbf0f4",
   },
   {
     id: 3,
-    img: "https://toplist.vn/images/800px/trang-phuc-dan-toc-pa-then-380322.jpg",
+    img: "https://3.bp.blogspot.com/-WPAFKlJH2Vw/Td20HRKm7YI/AAAAAAAAA3Y/p1THWp0at3Y/s1600/colourq86.jpg",
     title: "AUTUMN COLLECTION",
     desc: "Trang phục dân tộc đẹp và độc đáo nhất ở Việt Nam, hỗ trợ giao hàng toàn quốc, giảm giá 30%",
     bg: "f5fafd",
@@ -25,20 +25,14 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: "https://gamudaland.com.vn/celadoncity/wp-content/uploads/2018/02/xcach_lam_tranh_handmade_trang_tri_nha.jpg.pagespeed.ic_.kZIDjaPRqx.jpg",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/16875793169345c5d3ab3b745bc7aabafd36aaac43a52.jpg?alt=media&token=71b0f566-8c52-4e7d-82d6-a6dc05336a63",
     title: "Trang trí",
     cat: "decorate",
   },
   {
     id: 2,
-    img: "https://filebroker-cdn.lazada.vn/kf/S4afa9231af5b4baf9f878f633a15e12eO.jpg",
-    title: "Bonsai",
-    cat: "bonsai",
-  },
-  {
-    id: 3,
-    img: "https://i1-dulich.vnecdn.net/2020/12/31/2-1609406623.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=ztpPxet37HZ3EY5anVhB9g",
-    title: "Áo Dân Tộc",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/1687577759047sg-11134201-22120-5ba2z4e45qkvb4.jpg?alt=media&token=3c7d0919-98e9-4b6b-9822-54e07e5fc392",
+    title: "Sản phẩm hoàn thành",
     cat: "clothes",
   },
 ];

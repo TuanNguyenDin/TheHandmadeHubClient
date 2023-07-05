@@ -9,7 +9,7 @@ const Container = styled.div`
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 const Products = ({ cat, filters, sort }) => {
@@ -58,6 +58,8 @@ const Products = ({ cat, filters, sort }) => {
   }, [sort]);
 
   return (
+    <>
+    <h1>Đề xuất cho bạn</h1>
     <Container>
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={uuidv4()} />)
@@ -65,6 +67,7 @@ const Products = ({ cat, filters, sort }) => {
             .slice(0, 8)
             .map((item) => <Product item={item} key={uuidv4()} />)}
     </Container>
+    </>
   );
 };
 

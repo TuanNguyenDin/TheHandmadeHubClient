@@ -15,9 +15,12 @@ import { addProduct } from "../redux/cartRedux";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
-  padding: 50px;
+  border: 1px solid black;
+  border-radius: 1%;
+  box-shadow: 5px 10px #888888;
+  margin: 50px;
   display: flex;
-  ${mobile({ padding: "10px", flexDirection: "column" })}
+  ${mobile({ margin: "10px", flexDirection: "column" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
@@ -25,70 +28,41 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  box-shadow: 5px 3px #888888;
+  border-radius: 1%;
   object-fit: cover;
   ${mobile({ height: "40vh" })}
 `;
 
 const InforContainer = styled.div`
   flex: 1;
-  padding: 0px 50px;
+  padding: 10px 50px;
   ${mobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
-  font-weight: 200;
+  margin: 10px;
+  font-weight: 700;
 `;
 
 const Desc = styled.p`
-  margin: 20px 0px;
+  font-size: 20px;
+  margin: 10px;
   text-align: justify;
 `;
 
 const Price = styled.span`
   font-weight: 100;
-  font-size: 40px;
+  font-size: 28px;
 `;
 
-const FilterContainer = styled.div`
-  width: 50%;
-  margin: 30px 0px;
-  display: flex;
-  justify-content: space-between;
-  ${mobile({ width: "100%" })}
-`;
-
-const Filter = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const FilterTitle = styled.span`
-  font-size: 20px;
-  font-weight: 200;
-`;
-
-const FilterColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-  margin: 0px 5px;
-  cursor: pointer;
-`;
-
-const FilterSize = styled.select`
-  margin: 10px;
-  padding: 5px;
-`;
-
-const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
-  width: 50%;
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   ${mobile({ width: "100%" })}
 `;
 
@@ -100,8 +74,8 @@ const AmountContainer = styled.div`
 `;
 
 const Amount = styled.span`
-  width: 30px;
-  height: 30px;
+  width: 10vw;
+  height: 65px;
   border-radius: 10px;
   border: 1px solid teal;
   display: flex;
@@ -122,6 +96,11 @@ const Button = styled.button`
     color: white;
   }
 `;
+const Titleproducts = styled.h2`
+  font-size: 20px;
+  margin-top: 60px;
+  font-weight: 600;
+`;
 
 const Product = () => {
   const location = useLocation();
@@ -137,7 +116,7 @@ const Product = () => {
       try {
         const res = await publicRequest.get("/products/find/" + id);
         setProduct(res.data);
-      } catch {}
+      } catch { }
     };
     getProduct();
   }, [id]);
@@ -164,28 +143,10 @@ const Product = () => {
         </ImgContainer>
         <InforContainer>
           <Title>{product.title}</Title>
+          <Titleproducts>Mô tả sản phẩm</Titleproducts>
           <Desc>{product.desc}</Desc>
-          <Price>{product.price} VND</Price>
-          <FilterContainer>
-            <Filter>
-              <FilterTitle>Color</FilterTitle>
-              {product.color?.map((c) => (
-                <FilterColor
-                  color={c}
-                  key={uuidv4()}
-                  onClick={() => setColor(c)}
-                />
-              ))}
-            </Filter>
-            {/* <Filter>
-              <FilterTitle>Size</FilterTitle>
-              <FilterSize onChange={(e) => setSize(e.target.value)}>
-                {product.size?.map((s) => (
-                  <FilterSizeOption key={uuidv4()}>{s}</FilterSizeOption>
-                ))}
-              </FilterSize>
-            </Filter> */}
-          </FilterContainer>
+          <Price>Giá Tiền: {product.price} VND</Price>
+
           <AddContainer>
             <AmountContainer>
               <Remove onClick={() => handleQuantity("dec")} />
