@@ -17,24 +17,24 @@ const Image = styled.img`
 `;
 const Info = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 44vw;
+  top: 45vh;
+  background-color: rgb(192,192,192, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 9;
 `;
 const Title = styled.h1`
-  color: white;
+  color: #000000;
   margin: 20px;
 `;
 const Button = styled.button`
   border: none;
   padding: 10px;
-  background-color: white;
-  color: gray;
+  background-color: #000000;
+  color: #fff;
   cursor: pointer;
   font-weight: 600;
 `;
