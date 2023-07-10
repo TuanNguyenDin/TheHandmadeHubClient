@@ -9,14 +9,14 @@ export const sliderItems = [
   {
     id: 2,
     img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/1687577759047sg-11134201-22120-5ba2z4e45qkvb4.jpg?alt=media&token=3c7d0919-98e9-4b6b-9822-54e07e5fc392",
-    title: "LOUNGEWEAR LOVE",
+    title: "GIF OF LOVE",
     desc: "Những ngày mưa lạnh thì còn gì tuyệt hơn ngồi cùng người thân bên cạnh những món quà ý nghĩa, nến thơm sẽ giúp bạn thư giãn và tận hưởng những giây phút này",
     bg: "fbf0f4",
   },
   {
     id: 3,
     img: "https://3.bp.blogspot.com/-WPAFKlJH2Vw/Td20HRKm7YI/AAAAAAAAA3Y/p1THWp0at3Y/s1600/colourq86.jpg",
-    title: "AUTUMN COLLECTION",
+    title: "HANDMADE COLLECTION",
     desc: "gửi những thông điệp và món quà ý nghĩa của bạn đến người yêu thương cùng The Handmade Hub,chúng tôi luôn sẵng sàng phục vụ",
     bg: "f5fafd",
   },
@@ -33,7 +33,7 @@ export const categories = [
     id: 2,
     img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/1687577759047sg-11134201-22120-5ba2z4e45qkvb4.jpg?alt=media&token=3c7d0919-98e9-4b6b-9822-54e07e5fc392",
     title: "Sản phẩm hoàn thành",
-    cat: "clothes",
+    cat: "product",
   },
 ];
 

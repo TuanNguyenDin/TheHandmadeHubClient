@@ -8,6 +8,7 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import { IconButton } from '@material-ui/core';
 
 import { mobile } from "../responsive";
 
@@ -65,6 +66,29 @@ const ContactItem = styled.div`
 // const Payment = styled.img`
 //   width: 50%;
 // `;
+const FacebookIcon = () => {
+  const handleFacebookClick = () => {
+    window.open('https://www.facebook.com/profile.php?id=100093563133325'); // Chuyển hướng đến trang Facebook
+  };
+
+  return (
+    <SocialIcon color="3B5999" onClick={handleFacebookClick}>
+      <Facebook />
+    </SocialIcon>
+  );
+};
+
+const InstagramIcon = () => {
+  const handleInstagramClick = () => {
+    window.open('https://www.instagram.com/'); // Chuyển hướng đến trang Instagram
+  };
+
+  return (
+    <SocialIcon color="E4405F" onClick={handleInstagramClick}>
+      <Instagram />
+    </SocialIcon>
+  );
+}
 
 const Footer = () => {
   return (
@@ -75,12 +99,8 @@ const Footer = () => {
           Chúng tôi cung cấp dịch vụ mua bán và cung cấp các món hàng thủ công và các dịch vụ liên quan đế với chi phí và mức giá tốt nhất cho bạn
         </Desc>
         <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
-            <Instagram />
-          </SocialIcon>
+            <FacebookIcon />
+            <InstagramIcon />
         </SocialContainer>
       </Left>
       <Right>
