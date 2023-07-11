@@ -89,7 +89,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             LOGIN
           </Button>
-          Chưa có tài khoảng ? 
+          Chưa có tài khoản ? 
           <Link to={"/register"} style={{ color: "blue", textDecoration: "none" }}>
             Đăng ký tại đây!
           </Link>

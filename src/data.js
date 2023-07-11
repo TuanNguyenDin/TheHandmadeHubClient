@@ -17,7 +17,7 @@ export const sliderItems = [
     id: 3,
     img: "https://3.bp.blogspot.com/-WPAFKlJH2Vw/Td20HRKm7YI/AAAAAAAAA3Y/p1THWp0at3Y/s1600/colourq86.jpg",
     title: "AUTUMN COLLECTION",
-    desc: "gửi những thông điệp và món quà ý nghĩa của bạn đến người yêu thương cùng The Handmade Hub,chúng tôi luôn sẵng sàng phục vụ",
+    desc: "Gửi những thông điệp và món quà ý nghĩa của bạn đến người yêu thương cùng The Handmade Hub,chúng tôi luôn sẵng sàng phục vụ",
     bg: "f5fafd",
   },
 ];
