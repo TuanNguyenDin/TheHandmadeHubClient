@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { v4 as uuidv4 } from "uuid";
-import { userRequest } from "../requestMethods";
+import { userRequest, publicRequest } from "../requestMethods";
 import { useSelector } from "react-redux";
 import { Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
 
@@ -142,71 +142,88 @@ const Button = styled.button`
   color: white;
   font-weight: 600;
 `;
-const MyOrder=()=>{
-    const [orders, setOrders] = useState([{}]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    const currentUser = useSelector((state) => state.user.currentUser);
-    const getOrders = async () => {
-        setLoading(true);
-        try {
-            const response = await userRequest.get(`/orders/find/${currentUser._id}`);
-            setOrders(response.data);
-            setLoading(false);
-        } catch (error) {
-            setError(true);
-            setLoading(false);
-        }
+const MyOrder = () => {
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const currentUser = useSelector((state) => state.user.currentUser);
+  const getOrders = async () => {
+    setLoading(true);
+    try {
+      const response = await userRequest.get(`/orders/find/${currentUser._id}`);
+      response.data.forEach(async (element) => {
+        const products = element.products;
+        await Promise.all(
+          products.map(async (product) => {
+            const res = await publicRequest.get("/products/find/" + product._id);
+            res.data.quantity = product.quantity;
+            res.data.orderId = element._id;
+            const date = new Date(element.createdAt);
+            const options = { year: "numeric", month: "long", day: "numeric"};
+            const formattedDate = date.toLocaleString("vi-VN", options);
+            res.data.OrderDate = formattedDate;
+
+            setOrders((prevOrders) => [...prevOrders, res.data]);
+            console.log(formattedDate)
+          })
+        );
+      });
+
+      setLoading(false);
+    } catch (error) {
+      setError(true);
+      setLoading(false);
     }
-    const handleVieworder = () => {
-        getOrders();
-        console.log(orders);
-        orders.map((order) =>{console.log(order.products);});
-        setShowModal(!showModal);
-    }
-    const handleVieworderClose = () => {
-        setShowModal(!showModal);
-    }
-    return(
-        <div>
-        <Button onClick={ handleVieworder} >View Orders</Button>
-        <Dialog open={showModal} onClose={handleVieworder}>
+  }
+  const handleVieworder = () => {
+    getOrders();
+    setShowModal(!showModal);
+  }
+  const handleVieworderClose = () => {
+    setShowModal(!showModal);
+  }
+  return (
+    <div>
+      <Button onClick={handleVieworder} >Xem đơn Hàng</Button>
+      <Dialog open={showModal} onClose={handleVieworder}>
         <DialogTitle>Đơn hàng của bạn:</DialogTitle>
         <DialogContent>
-          {orders.map((order) => (
-              <Product key={uuidv4()}>
-                {/* <ProductDetail>
-                  <Image src={product.img} />
-                  <Details>
-                    <ProductName>
-                      <b>Product:</b> {product.title}
-                    </ProductName>
-                    <ProductId>
-                      <b>ID:</b> {product._id}
-                    </ProductId>
-                    <ProductColor color={product.color} />
-                    <ProductSize>
-                      <b>Size:</b> {product.size}
-                    </ProductSize>
-                  </Details>
-                </ProductDetail> */}
-                <PriceDetail>
-                  <ProductPrice>
-                    {order.amount}VND
-                  </ProductPrice>
-                </PriceDetail>
-              </Product>
-            ))}
+          {orders.map((product) => (
+            <Product key={uuidv4()}>
+              <ProductDetail>
+                <Image src={product.img} />
+                <Details>
+                  <ProductName>
+                    <b>Sản phẩm:</b> {product.title}
+                  </ProductName>
+                  <ProductId>
+                    <b>ID đơn hàng:</b> {product.orderId}
+                  </ProductId>
+                  <ProductName>
+                    <b>số lượng:</b> {product.quantity}
+                  </ProductName>
+                  <ProductName>
+                    <b>Ngày Đặt:</b> {product.OrderDate}
+                  </ProductName>
+                </Details>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductPrice>
+                  {product.price * product.quantity}
+                </ProductPrice>
+              </PriceDetail>
+            </Product>
+          ))}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleVieworderClose} color="primary">
-            Hủy
+            Đóng
           </Button>
         </DialogActions>
       </Dialog>
     </div>
-    )
+  )
 }
 
 export default MyOrder;
