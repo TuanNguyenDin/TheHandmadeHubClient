@@ -87,13 +87,13 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button onClick={handleClick} disabled={isFetching}>
-            LOGIN
+            Đăng nhập
           </Button>
           Chưa có tài khoản ? 
           <Link to={"/register"} style={{ color: "blue", textDecoration: "none" }}>
             Đăng ký tại đây!
           </Link>
-          {error && <Error>Something went wrong...</Error>}
+          {error && <Error>Xin lỗi nhưng thông tin bạn nhập có vẽ đã sai...</Error>}
         </Form>
       </Wrapper>
     </Container>

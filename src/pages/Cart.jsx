@@ -203,10 +203,10 @@ const Cart = () => {
                   <Image src={product.img} />
                   <Details>
                     <ProductName>
-                      <b>Product:</b> {product.title}
+                      <b>Sản phẩm:</b> {product.title}
                     </ProductName>
                     <ProductId>
-                      <b>ID:</b> {product._id}
+                      <b>Mã sản phẩm:</b> {product._id}
                     </ProductId>
                     <ProductColor color={product.color} />
                   </Details>
@@ -222,7 +222,7 @@ const Cart = () => {
             <Hr />
           </Info>
           <Summary>
-            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryTitle>Đơn hàng</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Phí Sản Phẩm</SummaryItemText>
               <SummaryItemPrice>{cart.total} VND</SummaryItemPrice>

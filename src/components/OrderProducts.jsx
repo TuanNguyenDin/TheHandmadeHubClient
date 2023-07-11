@@ -198,10 +198,10 @@ const MyOrder = () => {
                     <b>Sản phẩm:</b> {product.title}
                   </ProductName>
                   <ProductId>
-                    <b>ID đơn hàng:</b> {product.orderId}
+                    <b>Mã đơn hàng:</b> {product.orderId}
                   </ProductId>
                   <ProductName>
-                    <b>số lượng:</b> {product.quantity}
+                    <b>Số lượng:</b> {product.quantity}
                   </ProductName>
                   <ProductName>
                     <b>Ngày Đặt:</b> {product.OrderDate}

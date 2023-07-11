@@ -21,7 +21,7 @@ const Categories = () => {
   return (
     <Category>
       <div>
-        <h1>Categories</h1>
+        <h1>Danh mục</h1>
       </div>
       <Container>
       {categories.map((item) => (

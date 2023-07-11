@@ -58,7 +58,7 @@ const ProductList = () => {
     <Container>
       <Navbar />
       <Announcement />
-      <Title>{cat}</Title>
+      <Title>{cat=='decorate'?'Trang trí':'Sản phẩm'}</Title>
       <FilterContainer>
         <Filter>
           {/* <FilterText>Filter Products:</FilterText> */}
@@ -81,11 +81,11 @@ const ProductList = () => {
           </Select> */}
         </Filter>
         <Filter>
-          <FilterText>Sort Products:</FilterText>
+          <FilterText>Xắp xếp:</FilterText>
           <Select onChange={(e) => setSort(e.target.value)}>
             <Option value="newest">Newest</Option>
-            <Option value="asc">Price (asc)</Option>
-            <Option value="desc">Price (desc)</Option>
+            <Option value="asc">giá (tăng dần)</Option>
+            <Option value="desc">giá (giảm dần)</Option>
           </Select>
         </Filter>
       </FilterContainer>

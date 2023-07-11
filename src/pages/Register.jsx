@@ -77,19 +77,19 @@ const Register = () => {
       <Wrapper>
         <Title>Tạo Tài Khoảng Mới</Title>
         <Form>
-          <Input placeholder="name"
+          <Input placeholder="Nhập họ"
           onChange={(e)=>setName(e.target.value)} />
-          <Input placeholder="last name" 
+          <Input placeholder="Nhập tên" 
           onChange={(e)=>setLastName(e.target.value)}/>
-          <Input placeholder="username" 
+          <Input placeholder="Tên đăng nhập" 
           onChange={(e)=>setUsername(e.target.value)}/>
-          <Input placeholder="email" onChange={(e)=>setEmail(e.target.value)}/>
-          <Input placeholder="password" onChange={(e)=>setPassword(e.target.value)}/>
-          <Input placeholder="confirm password" onChange={(e)=>setConfirm(e.target.value)}/>
+          <Input placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
+          <Input placeholder="Mật khẩu" onChange={(e)=>setPassword(e.target.value)}/>
+          <Input placeholder="Xác nhận lại mật khẩu" onChange={(e)=>setConfirm(e.target.value)}/>
           <Agreement>
           Bằng cách tạo một tài khoản, tôi đồng ý với việc xử lý dữ liệu cá nhân của mình theo <b>CHÍNH SÁCH QUYỀN RIÊNG TƯ</b>
           </Agreement>
-          <Button onClick={handleClick} disabled={isFetching}>CREATE</Button>
+          <Button onClick={handleClick} disabled={isFetching}>Tạo tài khoảng mới</Button>
         </Form>
       </Wrapper>
     </Container>

@@ -24,7 +24,7 @@ const Success = () => {
           address: data.billing_details.address,
         });
         setOrderId(res.data._id);
-      } catch {}
+      } catch { }
     };
     data && createOrder();
   }, [cart, data, currentUser]);
@@ -40,11 +40,11 @@ const Success = () => {
       }}
     >
       {orderId
-        ? `Order has been created successfully. Your order number is ${orderId}`
-        : `Successfull. Your order is being prepared...`}
+        ? `Đơn đặt hàng đã được tạo thành công. số đơn đặt hàng của bạn là ${orderId}`
+        : `Thành công. Đơn đặt hàng của bạn đang được chuẩn bị...`}
       <Link to="/">
         <button style={{ padding: 10, marginTop: 20 }}>
-          CONTINUE SHOPPING
+          Tiếp tục mua sắm
         </button>
       </Link>
     </div>

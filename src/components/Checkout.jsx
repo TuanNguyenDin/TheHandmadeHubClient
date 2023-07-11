@@ -134,10 +134,10 @@ flex: 3;
                 <Image src={product.img} />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> {product.title}
+                    <b>Sản phẩm:</b> {product.title}
                   </ProductName>
                   <ProductId>
-                    <b>ID:</b> {product._id}
+                    <b>Mã sản phẩm:</b> {product._id}
                   </ProductId>
                   <ProductColor color={product.color} />
                 </Details>

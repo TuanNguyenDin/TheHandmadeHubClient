@@ -152,7 +152,7 @@ const Product = () => {
               <Amount>{quantity}</Amount>
               <Add onClick={() => handleQuantity("inc")} />
             </AmountContainer>
-            <Button onClick={handleClick}>ADD TO CART</Button>
+            <Button onClick={handleClick}>Thêm vào giỏ hàng</Button>
           </AddContainer>
         </InforContainer>
       </Wrapper>
