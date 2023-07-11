@@ -90,6 +90,7 @@ const Button = styled.button`
   background-color: white;
   cursor: pointer;
   font-weight: 500;
+  font-size: larger;
 
   &:hover {
     background-color: teal;

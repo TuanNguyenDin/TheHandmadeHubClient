@@ -110,7 +110,7 @@ const Navbar = () => {
         <Right>
           {currentUser ? (
             <div>
-              <h3>Welcome, {currentUser.username}!</h3>
+              <h3>Xin chào, {currentUser.username}!</h3>
             </div>
           ) : (
             <Link to="/login" style={{ color: "black", textDecoration: "none" }}>
