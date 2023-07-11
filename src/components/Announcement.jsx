@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Announcement = () => {
-  return <Container>Siêu lời, giảm ngay 50000VND cho đơn hàng đầu tiên của bạn</Container>;
+  return <Container>Siêu lời, giảm ngay 5000VND cho đơn hàng đầu tiên của bạn</Container>;
 };
 
 export default Announcement;

@@ -209,9 +209,6 @@ const Cart = () => {
                       <b>ID:</b> {product._id}
                     </ProductId>
                     <ProductColor color={product.color} />
-                    <ProductSize>
-                      <b>Size:</b> {product.size}
-                    </ProductSize>
                   </Details>
                 </ProductDetail>
                 <PriceDetail>
@@ -221,12 +218,13 @@ const Cart = () => {
                 </PriceDetail>
               </Product>
             ))}
+            <MyOrder />
             <Hr />
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
-              <SummaryItemText>Phụ Thu</SummaryItemText>
+              <SummaryItemText>Phí Sản Phẩm</SummaryItemText>
               <SummaryItemPrice>{cart.total} VND</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
@@ -239,7 +237,7 @@ const Cart = () => {
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Tổng Cộng</SummaryItemText>
-              <SummaryItemPrice>{cart.total} VND</SummaryItemPrice>
+              <SummaryItemPrice>{cart.total >0 ? cart.total+1000 : 0 } VND</SummaryItemPrice>
             </SummaryItem>
             {/* <StripeCheckout
               name="HandmadeHub"
