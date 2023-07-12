@@ -89,6 +89,7 @@ flex: 3;
     try {
       if (!address || !phone) {
         alert('Xin hãy Điền thông tin nhận hàng của bạn');
+        console.log(cart.products)
       } else {
         const res = await userRequest.post("/checkout/payment", {
           userId: currentUser._id,
@@ -98,7 +99,7 @@ flex: 3;
           products: cart.products,
           contact: phone,
           address: address,
-          status: "success",
+          status: opinion,
         });
         history.push("/success", {
           responseData: res.data,
@@ -152,13 +153,13 @@ flex: 3;
           <Hr />
         </Info>
           <FormGroup>
-            {/* <FormControlLabel control={<Checkbox defaultChecked value="agree"
-              checked={opinion === 'agree'}
+            <FormControlLabel control={<Checkbox defaultChecked value="pending"
+              checked={opinion === 'pending'}
               onChange={handleOptionChange} />} label="Thanh toán khi nhận hàng" />
-            <FormControlLabel disabled control={<Checkbox value="disagree"
-              checked={opinion === 'disagree'}
-              onChange={handleOptionChange} />} label="thanh toán bằng momo(phương thức không hỗ trỡ)" />
-            <FormControlLabel disabled control={<Checkbox value="disagree"
+            <FormControlLabel control={<Checkbox value="success"
+              checked={opinion === 'success'}
+              onChange={handleOptionChange} />} label="Thanh toán qua momo 0837106263" />
+            {/* <FormControlLabel disabled control={<Checkbox value="disagree"
               checked={opinion === 'disagree'}
               onChange={handleOptionChange} />} label="thanh toán bằng vnpay(phương thức không hỗ trỡ)" /> */}
           </FormGroup>
