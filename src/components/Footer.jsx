@@ -80,7 +80,7 @@ const FacebookIcon = () => {
 
 const InstagramIcon = () => {
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com/'); // Chuyển hướng đến trang Instagram
+    window.open('https://www.instagram.com/hubthehandmade/'); // Chuyển hướng đến trang Instagram
   };
 
   return (

@@ -88,7 +88,7 @@ const Slider = () => {
   };
   useEffect(() => {
     // Thiết lập interval để chuyển slide sau một khoảng thời gian nhất định (vd: 5 giây)
-    const interval = setInterval(handleAutoSlide, 5000);
+    const interval = setInterval(handleAutoSlide, 8000);
 
     // Xóa interval khi component unmount
     return () => clearInterval(interval);
