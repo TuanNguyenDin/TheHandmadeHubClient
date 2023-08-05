@@ -1,14 +1,14 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/358594836_133620933100011_198735205793074342_n.jpg?_nc_cat=109&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=-Gvf1MIjeGsAX8jHIQE&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfCIF8QFVwuiri9DITdiGG51Y5ph17qKxKVWCef9UeTYdw&oe=64B8D13B",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/358594836_133620933100011_198735205793074342_n.jpg?alt=media&token=ccdeaf90-e167-4e28-b279-7b7a83d7ac86",
     title: "SALE LÊN ĐẾN 50% ",
     desc: "Chúng tôi hiện đang tổ chức chương trình GIẢM GIÁ LÊN ĐẾN 50% cho đơn hàng đầu tiên của bạn!",
     bg: "ffa500",
   },
   {
     id: 2,
-    img: "https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/358673909_133933789735392_3693813500497781028_n.jpg?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=730e14&_nc_ohc=x3b6uuSE45YAX8Z9ZyE&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfBKxmLiZARkhbMwm6LgPwA9uH8_N92RpRBFLK0DsYK_aA&oe=64B99110",
+    img: "https://firebasestorage.googleapis.com/v0/b/exe201-6ce86.appspot.com/o/168921764528294efa4c2a78b19fc06b880fd40b48c79.jpg?alt=media&token=195d26bc-7a4a-4eba-bc96-36bd9789f81d",
     title: "Hôm nay ở The Handmade Hub có gì?",
     desc: "Được làm từ chất liệu da bò và da tự nhiên cao cấp cùng hợp kim và hạt gỗ tự nhiên, sản phẩm đảm bảo sự chắc chắn và bền bỉ. Đặc trưng với dây da với nhiều chi tiết hạt xỏ đầy màu sắc, vòng tay mang tông màu đất bắt mắt và tạo cảm giác chiết trung độc đáo.",
     bg: "d2b48c",
